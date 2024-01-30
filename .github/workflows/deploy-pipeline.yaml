@@ -58,5 +58,10 @@ jobs:
           release_name: Release ${{ github.run_number }}
           body: new release for ${{ github.sha }}.
           draft: false
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: zipped-bundle
           prerelease: false
+      
   
